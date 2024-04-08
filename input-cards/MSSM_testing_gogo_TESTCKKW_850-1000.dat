@@ -5,7 +5,7 @@ define sq = ul cl ur cr dl sl dr sr ul~ cl~ ur~ cr~ dl~ sl~ dr~ sr~
 generate p p > go go / sq @0
 add process p p > go go j / sq @1
 add process p p > go go j j / sq @2
-output /data/analysis/iduminic/Hammad/MSSM_LO_gogo_TESTCKKW_V2-850-1000
+output /data/analysis/iduminic/MSSM-gluino-neutralino/MSSM_LO_gogo_TESTCKKW_V2-850-1000
 launch--name=run_100k
 shower=Pythia8
 detector=Delphes
@@ -29,5 +29,5 @@ set pythia8_card Merging:Process                = pp>{go,1000021}{go,1000021}
 set pythia8_card Merging:TMS                    = 250
 set pythia8_card Merging:mayRemoveDecayProducts = on 
 #set pythia8_card MPI                            = on
-/data/analysis/iduminic/Hammad/param_card_go-decay.dat
-/data/analysis/iduminic/Hammad/delphes_card_ATLAS_neutralino.dat
+/data/analysis/iduminic/MSSM-gluino-neutralino/param_card_go-decay.dat
+/data/analysis/iduminic/MSSM-gluino-neutralino/delphes_card_ATLAS_neutralino.dat
