@@ -1,0 +1,7 @@
+#Ignore ROOT files
+*.root
+
+#Ignore output dir
+MSSM_LO*
+
+MSSM_NLO*

@@ -1,0 +1,33 @@
+set lhapdf to /data/analysis/iduminic/MG5_aMC_v3_3_2/HEPTools/lhapdf6_py3/bin/lhapdf-config
+set auto_convert_model T
+import model MSSM_SLHA2/
+define sq = ul cl ur cr dl sl dr sr ul~ cl~ ur~ cr~ dl~ sl~ dr~ sr~
+generate p p > go go / sq @0
+add process p p > go go j / sq @1
+add process p p > go go j j / sq @2
+output /data/analysis/iduminic/Hammad/MSSM_LO_gogo_TESTCKKW_V2-950-1000
+launch--name=run_100k
+shower=Pythia8
+detector=Delphes
+done
+set pdgs_for_merging_cut = 1, 2, 3, 4, 21
+set ktdurham = 250
+set ickkw = 0
+set xqcut = 0
+set nevents 100000
+set use_syst = False
+set wgo = 1
+set mgo = 1000
+set mneu1 = 950
+set ebeam1 6500
+set ebeam2 6500
+set pythia8_card Merging:doKTMerging            = on
+set pythia8_card Merging:ktType                 = 1
+set pythia8_card Merging:Dparameter             = 0.4
+set pythia8_card Merging:nJetMax                = 2
+set pythia8_card Merging:Process                = pp>{go,1000021}{go,1000021}
+set pythia8_card Merging:TMS                    = 250
+set pythia8_card Merging:mayRemoveDecayProducts = on 
+#set pythia8_card MPI                            = on
+/data/analysis/iduminic/Hammad/param_card_go-decay.dat
+/data/analysis/iduminic/Hammad/delphes_card_ATLAS_neutralino.dat
