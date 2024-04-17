@@ -6,7 +6,7 @@ generate p p > go go / sq @0
 add process p p > go go j / sq @1
 add process p p > go go j j / sq @2
 output /data/analysis/iduminic/MSSM-gluino-neutralino/MSSM_LO_gogo_TESTCKKW_V2-990-1000_500k
-launch--name=run_10k
+launch--name=run_500k
 shower=Pythia8
 detector=Delphes
 done
